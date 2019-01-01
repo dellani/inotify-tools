@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT([inotify-tools], [3.14], [radu.voicilas@gmail.com])
+AC_INIT([inotify-tools], [3.20.1])
 AC_CONFIG_AUX_DIR([config])
 AC_CONFIG_SRCDIR([src/inotifywait.c])
 AC_CONFIG_HEADERS([config.h])
@@ -62,6 +62,7 @@ AC_C_CONST
 AC_C_INLINE
 
 # Checks for library functions.
+AC_CHECK_FUNCS([daemon])
 
 # Set variables used in man page templates
 MAN_DATE=$(date +'%B %d, %Y')
